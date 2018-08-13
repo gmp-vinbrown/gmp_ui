@@ -1,0 +1,12 @@
+@import "../../variables";
+
+.top-nav{
+	border-bottom: solid 1pt $light-gray;
+	display: flex;
+	flex-direction: row;
+	height: 5rem;
+	width: 100vw;
+	ul{
+		list-style: none;
+	}
+}
