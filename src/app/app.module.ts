@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { NgModule } from '@angular/core';
 
@@ -16,6 +19,8 @@ import { LocationComponent } from './location/location.component';
 import { MemberComponent } from './member/member.component';
 import { EventComponent } from './event/event.component';
 
+import { SchoolHttpService } from './services/http/school-http.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,17 +30,20 @@ import { EventComponent } from './event/event.component';
     PasswordResetComponent,
     SchoolComponent,
     LocationComponent,
-    MemberComponent,
+    MemberComponent, 
     EventComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
+	AppRoutingModule,
+	FormsModule,
+	HttpModule,
+	HttpClientModule,
     InputTextModule,
     AccordionModule
   ],
-  providers: [],
+  providers: [SchoolHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

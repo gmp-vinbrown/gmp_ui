@@ -4,7 +4,7 @@ import { School } from 'gmp_ui_domain_models';
 @Component({
   selector: 'app-school',
   templateUrl: './school.component.html',
-  styleUrls: ['./school.component.css']
+  styleUrls: ['./school.component.scss']
 })
 export class SchoolComponent implements OnInit {
 
